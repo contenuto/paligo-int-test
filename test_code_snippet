@@ -1,5 +1,1 @@
-const docID = await ditto.store.collection('people').upsert({
-  name: 'Susan',
-  age: 31,
-})
-console.log(docID) // "507f191e810c19729de860ea"
+let person = json!({\n    \"name\": \"Susan\".to_string(),\n    \"age\": 31,\n});\nlet collection = ditto.store().collection(\"people\").unwrap();\nlet id = collection.upsert(person).unwrap();\n\n",
