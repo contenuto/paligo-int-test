@@ -1,0 +1,5 @@
+const docID = await ditto.store.collection('people').upsert({
+  name: 'Susan',
+  age: 31,
+})
+console.log(docID) // "507f191e810c19729de860ea"
